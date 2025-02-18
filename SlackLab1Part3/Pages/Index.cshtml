@@ -27,6 +27,13 @@
             <strong>GrantOrg</strong> Administrator
         </button>
     </form>
+
+    <form method="post">
+        <button type="submit" asp-page-handler="InsertDummyData" class="PopulateButton">
+            Populate Dummy Data
+        </button>
+    </form>
+
 </div>
 
 
@@ -72,5 +79,21 @@
         height: auto; 
         margin-bottom: 15px;
     }
+
+    .insert-button {
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: #1F5D7E;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+        .insert-button:hover {
+            background-color: #17445F;
+        }
+
 </style>
 
