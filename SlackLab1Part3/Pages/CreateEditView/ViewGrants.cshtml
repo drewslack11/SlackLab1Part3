@@ -1,4 +1,44 @@
 ﻿@page
 @model SlackLab1Part3.Pages.CreateEditView.ViewGrantsModel
+
 @{
+    ViewData["Title"] = "View Grants";
 }
+<h3>Grants Overview</h3>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Grant ID</th>
+            <th>Category</th>
+            <th>Funding Organization</th>
+            <th>Submission Date</th>
+            <th>Award Date</th>
+            <th>Award Amount</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var GRANT in Model.GrantList)  
+            {
+                <tr>
+                    <td>@GRANT.GrantID</td> 
+                    <td>@GRANT.Category</td>
+                    <td>@GRANT.FundingOrg</td>
+                    <td>@GRANT.SubmissionDate</td>
+                    <td>@GRANT.AwardDate</td>
+                    <td>@GRANT.AwardSubtotal</td>
+                    <td>@GRANT.GrantStatus</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- Table Styling -->
+<style>
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+</style>

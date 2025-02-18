@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SlackLab1Part3.Pages.DB;
 
 namespace SlackLab1Part3.Pages
 {
@@ -16,5 +17,12 @@ namespace SlackLab1Part3.Pages
         {
 
         }
+   
+        public void OnPostInsertDummyData()
+        {
+            DBClass.InsertDummyData();
+        }
     }
+
 }
+
