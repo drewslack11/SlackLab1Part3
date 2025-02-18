@@ -1,0 +1,77 @@
+﻿@page
+@model SlackLab1Part3.Pages.RoleHomepages.BusinessPartnerRepModel
+@{
+}
+
+<!-- ======= BUSINESS PARTNER REP DASHBOARD ======= -->
+<div class="partner-dashboard">
+    <h2><em>Welcome, <strong>Business Partner Representative!</strong></em></h2>
+
+    <!-- Grants Section -->
+    <h3>Grants</h3>
+    <div class="button-container">
+        <form asp-page="/CreateEditView/ViewGrants">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/View.png" alt="View Icon">
+                <strong>View</strong> Grants
+            </button>
+        </form>
+    </div>
+
+    <!-- Projects Section -->
+    <h3>Projects</h3>
+    <div class="button-container">
+        <form asp-page="/CreateEditView/ViewProjects">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/View.png" alt="View Icon">
+                <strong>View</strong> Projects
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ======= BUSINESS PARTNER REP DASHBOARD STYLES ======= -->
+<style>
+    /* Partner Rep Dashboard Container */
+    .partner-dashboard {
+        background: white;
+        width: 90%;
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+    }
+
+    /* Button Container */
+    .button-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    /* Dashboard Buttons */
+    .dashboard-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+    }
+
+    .dashboard-button img {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .dashboard-button:hover {
+        background: #dcdcdc;
+    }
+</style>

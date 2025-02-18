@@ -1,0 +1,76 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- ======= WELCOME BOX SECTION ======= -->
+<div class="welcome-box">
+    <img src="~/images/GrantSphereLogo.png" alt="GrantSphere Logo" class="welcome-logo">
+    <h2>Welcome, <strong>GrantSphere User!</strong></h2>
+    <p>To get started, indicate whether you are a...</p>
+
+    <form method="get" asp-page="/RoleHomepages/GrantSphereFaculty">
+        <button type="submit" class="role-button">
+            <strong>GrantSphere</strong> Faculty Member
+        </button>
+    </form>
+
+    <form method="get" asp-page="/RoleHomepages/BusinessPartnerRep">
+        <button type="submit" class="role-button">
+            Business Partner Representative
+        </button>
+    </form>
+
+    <form method="get" asp-page="/RoleHomepages/GrantOrgAdmin">
+        <button type="submit" class="role-button">
+            <strong>GrantOrg</strong> Administrator
+        </button>
+    </form>
+</div>
+
+
+<style>
+
+    .welcome-box {
+        background: white;
+        width: 350px;
+        margin: 50px auto; 
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+    }
+
+
+    .welcome-logo {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+
+    .role-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        border: 1px solid #000;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.2s ease-in-out;
+    }
+
+    .role-button:hover {
+        background: #f5f5f5;
+    }
+
+    .welcome-logo {
+        width: 150px;
+        height: auto; 
+        margin-bottom: 15px;
+    }
+</style>
+

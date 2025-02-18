@@ -1,0 +1,128 @@
+﻿@page
+@model SlackLab1Part3.Pages.RoleHomepages.GrantOrgAdminModel
+@{
+}
+
+<!-- ======= GRANT ORG ADMIN DASHBOARD ======= -->
+<div class="admin-dashboard">
+    <div class="dashboard-header">
+        <h2><em>Welcome, <strong>GrantOrg Admin!</strong></em></h2>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <label><img src="~/images/SearchIcon.png" alt="Search Icon"> <strong>Search:</strong></label>
+            <input type="text" placeholder="Search Projects, Grants, Faculty, & Business Partners...">
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <h3>Projects</h3>
+    <div class="button-container">
+        <form asp-page="/CreateEditView/CreateProject">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/Create.png" alt="Create Icon">
+                <strong>Create</strong> Project
+            </button>
+        </form>
+
+        <form asp-page="/CreateEditView/ViewProjects">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/Edit.png" alt="Edit Icon">
+                <strong>Edit</strong> Project
+            </button>
+        </form>
+
+        <form asp-page="/CreateEditView/ViewProjects">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/View.png" alt="View Icon">
+                <strong>View</strong> Projects
+            </button>
+        </form>
+    </div>
+
+    <!-- Business Partner Management Section -->
+    <h3>Business Partner Management</h3>
+    <div class="button-container">
+        <form asp-page="/CreateEditView/CreateBusinessPartner">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/AddFaculty.png" alt="Create Partner Icon">
+                <strong>Create</strong> Partner
+            </button>
+        </form>
+
+        <form asp-page="/CreateEditView/ViewBusinessPartners">
+            <button type="submit" class="dashboard-button">
+                <img src="~/images/View.png" alt="View Icon">
+                <strong>View</strong> Partners
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ======= GRANT ORG ADMIN DASHBOARD STYLES ======= -->
+<style>
+    .admin-dashboard {
+        background: white;
+        width: 90%;
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+    }
+
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container img {
+        height: 16px;
+        margin-right: 5px;
+    }
+
+    .search-container input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 300px;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+    }
+
+    .dashboard-button img {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .dashboard-button:hover {
+        background: #dcdcdc;
+    }
+</style>

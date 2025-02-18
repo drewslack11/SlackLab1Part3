@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SlackLab1Part3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SlackLab1Part3.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- ======= PAGE BACKGROUND COLOR ======= -->
+    <style>
+        body {
+            background-color: #F3F4F6; 
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <!-- ======= HEADER SECTION ======= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="~/images/AlternateLogo.png" alt="GrantSphere Logo">
+                <span><strong>GRANTSPHERE</strong></span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/Grants">Grants</a>
+                <a href="/Projects">Projects</a>
+                <a href="/BusinessPartners">Business Partners</a>
+                <a href="/Messaging">Messaging</a>
+            </div>
+            <div class="nav-right">
+                <a href="#"><img src="~/images/SearchIcon.png" alt="Search" class="search-icon"></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ======= HEADER STYLES ======= -->
+    <style>
+        .navbar {
+            background-color: #1F5D7E; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo img {
+            height: 60px !important; 
+            width: auto !important;
+            margin-right: 10px;
+        }
+
+        .search-icon {
+            height: 25px !important; 
+            width: auto !important;
+            vertical-align: middle;
+        }
+
+        .nav-links a, .nav-right a {
+            color: white;
+            text-decoration: none;
+            justify-content: center;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+            .nav-links a:hover, .nav-right a:hover {
+                text-decoration: underline;
+            }
+    </style>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- ======= FOOTER SECTION ======= -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="~/images/linelogo.png" alt="GrantSphere Logo" class="footer-logo">
+            </div>
+            <div class="footer-right">
+                <span>© 2025 GrantSphere. All rights reserved.</span>
+                <a href="/PrivacyPolicy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======= FOOTER STYLES ======= -->
+    <style>
+        .footer {
+            background-color: #E0E0E0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .footer-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 30px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+            .footer-right a {
+                color: #007BFF; 
+                text-decoration: none;
+                margin-left: 10px;
+            }
+
+                .footer-right a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
